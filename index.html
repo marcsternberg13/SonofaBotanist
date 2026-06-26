@@ -199,7 +199,7 @@ h1 em { font-style: italic; color: var(--rust); }
 .fulbright-bar { background: var(--rust); padding: 20px 24px; display: flex; gap: 14px; align-items: flex-start; }
 .fb-label { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(240,235,224,.6); margin-bottom: 4px; }
 .fb-title { font-size: 14px; font-weight: 600; color: var(--cream); line-height: 1.45; }
-.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; margin-bottom: 24px; }
 .edu-item { background: rgba(240,235,224,.05); border: 1px solid rgba(240,235,224,.08); padding: 14px 16px; }
 .edu-school { font-size: 12px; font-weight: 700; color: var(--cream); }
 .edu-degree { font-size: 12px; color: rgba(240,235,224,.55); margin-top: 2px; }
@@ -856,15 +856,13 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
       </div>
       <div class="hero-visual">
         <div class="hero-headshot-wrap">
-          <div class="hero-ring"></div>
-          <img src="marc-producer.jpg"
-               class="hero-headshot"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-               alt="Marc Sternberg — Creative Producer">
           <img src="soab-logo-color-full.png"
-               class="hero-headshot-fallback"
-               style="display:none"
+               style="width:100%;max-width:320px;display:block;"
                alt="Son of a Botanist Productions">
+          <img src="marc-producer.jpg"
+               style="width:120px;height:120px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid var(--border-mid);margin-top:20px;display:block;"
+               onerror="this.style.display='none'"
+               alt="Marc Sternberg — Creative Producer">
         </div>
       </div>
     </div>
@@ -962,7 +960,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 
       <!-- Victory (Narrative Feature) -->
       <div class="highlight-card fu">
-        <img src="Victory_Kickoff_Square_v2.png"
+        <img src="victory-big-screen-screenshot.jpg"
              class="highlight-card-img"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
              alt="Victory on the Big Screen">
@@ -1029,7 +1027,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 
       <!-- Cowgirls -->
       <div class="highlight-card fu" style="background:var(--forest);">
-        <div class="highlight-img-placeholder" style="background:rgba(30,61,43,.6);">
+        <img src="cowgirls-screenshot.jpg" class="highlight-card-img" alt="Cowgirls: Women of Western Art" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="highlight-img-placeholder" style="display:none;background:rgba(30,61,43,.6);">
           <img src="soab-logo-color-full.png" alt="">
         </div>
         <div class="highlight-card-body">
@@ -1070,7 +1069,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Victory on the Big Screen -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <img src="Victory_Kickoff_Square_v2.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory on the Big Screen">
+            <img src="victory-big-screen-screenshot.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory on the Big Screen">
             <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Victory on the Big Screen</span>
@@ -1241,7 +1240,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Victory (narrative) -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <img src="Victory_Kickoff_Square_v2.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory">
+            <img src="victory-big-screen-screenshot.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory">
             <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Victory</span>
@@ -1667,7 +1666,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           <div class="vs-detail-list">
             <div class="vs-detail">Young Poteet — Forrest Goodluck</div>
             <div class="vs-detail">Middle Poteet — Martin Sensmeier</div>
-            <div class="vs-detail">Elder Poteet — Wes Studi</div>
+            <div class="vs-detail">Elder Poteet — Zahn McClarnon</div>
           </div>
         </div>
         <div class="vs-card">
@@ -1815,6 +1814,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         </div>
       </div>
       <div class="cg-right fu">
+        <img src="cowgirls-screenshot.jpg" alt="Cowgirls: Women of Western Art" style="width:100%;height:260px;object-fit:cover;display:block;margin-bottom:16px;" onerror="this.style.display='none'">
         <div class="cg-card">
           <div class="cg-card-label">Featured Artists</div>
           <div class="artist-cols">
