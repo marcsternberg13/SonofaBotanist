@@ -293,7 +293,9 @@ h1 em { font-style: italic; color: var(--rust); }
 #completed .cat-label { color: rgba(240,235,224,.55); }
 #completed .cat-label::after { background: rgba(240,235,224,.12); }
 .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 2px; margin-bottom: 40px; }
-.comp-card { background: rgba(240,235,224,.05); border: 1px solid rgba(240,235,224,.08); padding: 22px 24px; transition: background .25s; }
+.comp-card { background: rgba(240,235,224,.05); border: 1px solid rgba(240,235,224,.08); padding: 0; transition: background .25s; overflow:hidden; }
+.comp-card-img { width:100%; height:110px; object-fit:cover; display:block; margin-bottom:0; }
+.comp-card-body { padding: 22px 24px; }
 .comp-card:hover { background: rgba(240,235,224,.1); }
 .comp-status { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .comp-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--cream); margin-bottom: 6px; line-height: 1.3; }
@@ -799,7 +801,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 <!-- NAV -->
 <nav id="navbar">
   <a href="#home" class="nav-brand">
-    <img src="soab-logo-color-full.png" onerror="this.style.display='none'" alt="Son of a Botanist Productions">
+    <img src="soab-logo.png" onerror="this.style.display='none'" alt="Son of a Botanist Productions">
     <div class="nav-brand-text">
       <strong>Son of a Botanist</strong>
       <span>Productions</span>
@@ -856,11 +858,11 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
       </div>
       <div class="hero-visual">
         <div class="hero-headshot-wrap">
-          <img src="soab-logo-color-full.png"
-               style="width:100%;max-width:320px;display:block;"
+          <img src="SOAB-logo-vertical.jpg"
+               style="width:100%;max-width:380px;display:block;object-fit:contain;"
                alt="Son of a Botanist Productions">
           <img src="marc-producer.jpg"
-               style="width:120px;height:120px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid var(--border-mid);margin-top:20px;display:block;"
+               style="width:90px;height:90px;object-fit:cover;object-position:top;border-radius:50%;border:2px solid var(--border-mid);margin-top:16px;display:block;"
                onerror="this.style.display='none'"
                alt="Marc Sternberg — Creative Producer">
         </div>
@@ -1027,7 +1029,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 
       <!-- Cowgirls -->
       <div class="highlight-card fu" style="background:var(--forest);">
-        <img src="cowgirls-screenshot.jpg" class="highlight-card-img" alt="Cowgirls: Women of Western Art" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img src="cowgirls-women-of-western-art.jpg" class="highlight-card-img" alt="Cowgirls: Women of Western Art" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="highlight-img-placeholder" style="display:none;background:rgba(30,61,43,.6);">
           <img src="soab-logo-color-full.png" alt="">
         </div>
@@ -1069,7 +1071,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Victory on the Big Screen -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <img src="victory-big-screen-screenshot.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory on the Big Screen">
+            <img src="victory.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory on the Big Screen">
             <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Victory on the Big Screen</span>
@@ -1095,7 +1097,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Guardians of the Green -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="guardians-of-the-green.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Guardians of the Green">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Guardians of the Green</span>
             </div>
@@ -1121,7 +1124,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Tipping Africa -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="tipping-africa.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Tipping Africa">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Tipping Africa</span>
             </div>
@@ -1147,7 +1151,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- In Service of the Kingdom -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="in-service-of-the-kingdom.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="In Service of the Kingdom">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>In Service of the Kingdom</span>
             </div>
@@ -1205,7 +1210,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Outside the Frame -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <img src="OTFlogo.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Outside the Frame">
+            <img src="outside-the-frame.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Outside the Frame">
             <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Outside the Frame</span>
@@ -1240,7 +1245,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Victory (narrative) -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <img src="victory-big-screen-screenshot.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory">
+            <img src="victory.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Victory">
             <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Victory</span>
@@ -1296,7 +1301,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- The Owls Club -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="the-owls-club.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="The Owls Club">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>The Owls Club</span>
             </div>
@@ -1322,7 +1328,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Cherry Lime Soda Pop -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <img src="cherry-lime-soda-pop-logo.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Cherry Lime Soda Pop">
+            <img src="cherry-lime-soda-pop.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Cherry Lime Soda Pop">
             <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Cherry Lime Soda Pop</span>
@@ -1349,7 +1355,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- A Good Hand -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="a-good-hand.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="A Good Hand">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>A Good Hand</span>
             </div>
@@ -1374,7 +1381,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- I Can Always Point Out a New Mexico Sky -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="i-can-always-point-out-a-new-mexico-sky.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="I Can Always Point Out a New Mexico Sky">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>I Can Always Point Out a New Mexico Sky</span>
             </div>
@@ -1408,7 +1416,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Lythlandria -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="lythlandria.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Lythlandria">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Lythlandria</span>
             </div>
@@ -1434,7 +1443,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Eternal Carnival -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="eternal-carnival.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Eternal Carnival">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Eternal Carnival</span>
             </div>
@@ -1459,7 +1469,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- SITA -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="sita-spies-in-the-air.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="SITA: Spies in the Air">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>SITA: Spies in the Air</span>
             </div>
@@ -1486,7 +1497,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- King's Caravan -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="kings-caravan.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="King's Caravan">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>King's Caravan</span>
             </div>
@@ -1519,7 +1531,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- The Invisible Canvas -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="the-invisible-canvas.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="The Invisible Canvas">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>The Invisible Canvas</span>
             </div>
@@ -1544,7 +1557,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- Santa Fe Celebrates -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="santa-fe-celebrates.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Santa Fe Celebrates">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>Santa Fe Celebrates</span>
             </div>
@@ -1602,7 +1616,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         <!-- The Book of Joe -->
         <div class="proj-card fu">
           <div class="proj-img">
-            <div class="proj-img-placeholder">
+            <img src="the-book-of-joe.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="The Book of Joe">
+            <div class="proj-img-placeholder" style="display:none">
               <img src="soab-logo-color-full.png" class="proj-img-logo" alt="">
               <span>The Book of Joe</span>
             </div>
@@ -1814,7 +1829,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
         </div>
       </div>
       <div class="cg-right fu">
-        <img src="cowgirls-screenshot.jpg" alt="Cowgirls: Women of Western Art" style="width:100%;height:260px;object-fit:cover;display:block;margin-bottom:16px;" onerror="this.style.display='none'">
+        <img src="cowgirls-women-of-western-art.jpg" alt="Cowgirls: Women of Western Art" style="width:100%;height:260px;object-fit:cover;display:block;margin-bottom:16px;" onerror="this.style.display='none'">
         <div class="cg-card">
           <div class="cg-card-label">Featured Artists</div>
           <div class="artist-cols">
@@ -1870,6 +1885,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
       <div class="cat-label">Documentary Feature</div>
       <div class="comp-grid">
         <div class="comp-card">
+          <img src="cowgirls-women-of-western-art.jpg" class="comp-card-img" alt="Cowgirls: Women of Western Art" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed</div>
           <div class="comp-title">Cowgirls: Women of Western Art</div>
           <div class="comp-role">Producer / Writer / Director</div>
@@ -1880,6 +1897,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           </div>
         </div>
         <div class="comp-card">
+          <img src="undiscovered-country.jpg" class="comp-card-img" alt="Undiscovered Country" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed</div>
           <div class="comp-title">Undiscovered Country</div>
           <div class="comp-role">Producer / Writer / Director</div>
@@ -1889,6 +1908,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           </div>
         </div>
         <div class="comp-card">
+          <img src="why-we-mow.jpg" class="comp-card-img" alt="Why We Mow" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed</div>
           <div class="comp-title">Why We Mow</div>
           <div class="comp-role">Producer / Writer / Director</div>
@@ -1898,6 +1919,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           </div>
         </div>
         <div class="comp-card">
+          <img src="his-way.jpg" class="comp-card-img" alt="His Way: Overcoming Addiction" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed</div>
           <div class="comp-title">His Way: Overcoming Addiction</div>
           <div class="comp-role">Producer / Writer / Director</div>
@@ -1911,6 +1934,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
       <div class="cat-label">Short Film</div>
       <div class="comp-grid">
         <div class="comp-card">
+          <img src="juk.jpg" class="comp-card-img" alt="JUK" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed 2026</div>
           <div class="comp-title">JUK</div>
           <div class="comp-role">Producer</div>
@@ -1922,6 +1947,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           </div>
         </div>
         <div class="comp-card">
+          <img src="i-cant-eat-eggs-anymore.jpg" class="comp-card-img" alt="I Can't Eat Eggs Anymore" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed</div>
           <div class="comp-title">I Can't Eat Eggs Anymore</div>
           <div class="comp-role">Producer / Writer</div>
@@ -1952,6 +1979,8 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           <div class="comp-desc">Short film. 2024.</div>
         </div>
         <div class="comp-card">
+          <img src="mist-2098.jpg" class="comp-card-img" alt="Mist 2098" onerror="this.style.display='none'">
+          <div class="comp-card-body">
           <div class="comp-status">Completed 2025</div>
           <div class="comp-title">Mist 2098</div>
           <div class="comp-role">Producer</div>
@@ -2268,7 +2297,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 <footer class="footer-rich">
   <div class="footer-rich-top">
     <div class="footer-brand-col">
-      <img src="soab-logo-color-full.png" onerror="this.style.display='none'" alt="Son of a Botanist Productions">
+      <img src="soab-logo.png" onerror="this.style.display='none'" alt="Son of a Botanist Productions">
       <div style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,235,224,.5);">Son of a Botanist Productions LLC</div>
       <p class="footer-tagline">Documenting communities that force industries to change.<br>Exclusion → Excellence → Recognition.</p>
     </div>
