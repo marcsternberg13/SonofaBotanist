@@ -292,9 +292,9 @@ h1 em { font-style: italic; color: var(--rust); }
 #completed .section-h em { color: var(--gold); }
 #completed .cat-label { color: rgba(240,235,224,.55); }
 #completed .cat-label::after { background: rgba(240,235,224,.12); }
-.comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 2px; margin-bottom: 40px; }
+.comp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
 .comp-card { background: rgba(240,235,224,.05); border: 1px solid rgba(240,235,224,.08); padding: 0; transition: background .25s; overflow:hidden; }
-.comp-card-img { width:100%; height:110px; object-fit:cover; display:block; margin-bottom:0; }
+.comp-card-img { width:100%; height:180px; object-fit:cover; display:block; }
 .comp-card-body { padding: 22px 24px; }
 .comp-card:hover { background: rgba(240,235,224,.1); }
 .comp-status { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
@@ -962,7 +962,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 
       <!-- Victory (Narrative Feature) -->
       <div class="highlight-card fu">
-        <img src="victory-big-screen-screenshot.jpg"
+        <img src="victory.jpg"
              class="highlight-card-img"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
              alt="Victory on the Big Screen">
@@ -1020,7 +1020,7 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
           <div class="highlight-badge badge-complete">Completed · World Premiere May 2, 2026</div>
           <div class="highlight-format">Short Film · ~15 min · SAG-AFTRA Student · Chapman University MFA Thesis</div>
           <div class="highlight-title">JUK</div>
-          <div class="highlight-logline">Georgia, 1950s. Skip, 17, sneaks out to a juke joint for the first time — the first night she chooses herself. Written &amp; directed by Tierra "TT" Frost. ASC Heritage Award · Out on Film Grant · PBS Fine Cut Semi-Finalist. Student Academy Award contender.</div>
+          <div class="highlight-logline">Georgia, 1950s. Skip, 17, sneaks out to a juke joint for the first time — the first night she chooses herself. Written &amp; directed by Tierra "TT" Frost. ASC Heritage Award · Out on Film Grant · PBS Fine Cut Semi-Finalist. .</div>
           <div class="highlight-actions">
             <a href="mailto:marcsternberg13@gmail.com?subject=JUK EPK Request" class="highlight-cta highlight-cta-gold">Request EPK →</a>
           </div>
@@ -1875,142 +1875,250 @@ footer { background: #0D1E14; padding: 36px clamp(20px,4vw,60px); display: flex;
 </section>
 
 <!-- COMPLETED WORK -->
-<section id="completed">
+<section id="completed" style="background:var(--forest);color:var(--cream);">
   <div class="inner">
-    <div class="eyebrow">Production History</div>
-    <h2 class="section-h">Completed <em>Work</em></h2>
+    <div class="eyebrow" style="color:var(--gold);">Production History</div>
+    <h2 class="section-h" style="color:var(--cream);">Completed <em style="color:var(--gold);">Work</em></h2>
 
     <!-- Documentary Feature -->
     <div class="slate-category" style="margin-top:48px;">
-      <div class="cat-label">Documentary Feature</div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <img src="cowgirls-women-of-western-art.jpg" class="comp-card-img" alt="Cowgirls: Women of Western Art" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">Cowgirls: Women of Western Art</div>
-          <div class="comp-role">Producer / Writer / Director</div>
-          <div class="comp-desc">Female artists dismantling a century of gendered exclusion from Western art's most prestigious institutions. Narrated by Red Steagall, Country Music Hall of Fame. 50+ interviews · 18 artists · 11 institutional partners.</div>
-          <div class="comp-links">
-            <a href="https://vimeo.com/1127200867/a47875cf01" target="_blank" class="comp-link">Teaser Trailer →</a>
-            <a href="https://vimeo.com/1100188514" target="_blank" class="comp-link">Sample Interview →</a>
+      <div class="cat-label" style="color:rgba(240,235,224,.5);">Documentary Feature<span style="flex:1;height:1px;background:rgba(240,235,224,.1);display:inline-block;margin-left:16px;vertical-align:middle;"></span></div>
+      <div class="proj-grid">
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="cowgirls-women-of-western-art.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Cowgirls: Women of Western Art">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>Cowgirls</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Feature Documentary</span></div>
           </div>
-        </div>
-        <div class="comp-card">
-          <img src="undiscovered-country.jpg" class="comp-card-img" alt="Undiscovered Country" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">Undiscovered Country</div>
-          <div class="comp-role">Producer / Writer / Director</div>
-          <div class="comp-desc">Finding beauty in overlooked places and the people who inhabit them. The wine, food, and landscapes of California's Central Coast.</div>
-          <div class="comp-links">
-            <a href="https://vimeo.com/885725441" target="_blank" class="comp-link">View Sizzle Reel →</a>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Documentary Feature</div>
+            <div class="proj-title" style="color:var(--cream);">Cowgirls: Women of Western Art</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Female artists dismantling a century of gendered exclusion from Western art's most prestigious institutions. Narrated by Red Steagall, Country Music Hall of Fame.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer / Writer / Director</span></div>
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Stats</span><span>50+ interviews · 18 artists · 11 institutional partners</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Documentary</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Western Art</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Post-Production</span></div>
           </div>
+          <a href="https://vimeo.com/1127200867/a47875cf01" target="_blank" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Watch Teaser →</a>
         </div>
-        <div class="comp-card">
-          <img src="why-we-mow.jpg" class="comp-card-img" alt="Why We Mow" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">Why We Mow</div>
-          <div class="comp-role">Producer / Writer / Director</div>
-          <div class="comp-desc">The pride of property ownership and maintaining fabulous curb appeal.</div>
-          <div class="comp-links">
-            <a href="https://vimeo.com/913051467" target="_blank" class="comp-link">Watch →</a>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="undiscovered-country.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Undiscovered Country">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>Undiscovered Country</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Documentary Series</span></div>
           </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Documentary Feature</div>
+            <div class="proj-title" style="color:var(--cream);">Undiscovered Country</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">The beauty, food, and wine of California's Central Coast — finding extraordinary in overlooked places.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer / Writer / Director</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Documentary</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">California</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Food & Wine</span></div>
+          </div>
+          <a href="https://vimeo.com/885725441" target="_blank" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">View Sizzle Reel →</a>
         </div>
-        <div class="comp-card">
-          <img src="his-way.jpg" class="comp-card-img" alt="His Way: Overcoming Addiction" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">His Way: Overcoming Addiction</div>
-          <div class="comp-role">Producer / Writer / Director</div>
-          <div class="comp-desc">Alternative recovery approaches from an Alabama rehab center — documenting paths the mainstream rarely shows.</div>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="why-we-mow.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Why We Mow">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>Why We Mow</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Short Documentary</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Documentary</div>
+            <div class="proj-title" style="color:var(--cream);">Why We Mow</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">The pride of property ownership and maintaining fabulous curb appeal.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer / Writer / Director</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Documentary</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short</span></div>
+          </div>
+          <a href="https://vimeo.com/913051467" target="_blank" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Watch →</a>
         </div>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="his-way.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="His Way">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>His Way</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Feature Documentary</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Feature Documentary</div>
+            <div class="proj-title" style="color:var(--cream);">His Way: Overcoming Addiction</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Alternative recovery approaches from an Alabama rehab center — documenting paths the mainstream rarely shows.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer / Writer / Director</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Documentary</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Recovery</span></div>
+          </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=His Way — Inquiry" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Inquire →</a>
+        </div>
+
       </div>
     </div>
 
     <!-- Short Film -->
     <div class="slate-category">
-      <div class="cat-label">Short Film</div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <img src="juk.jpg" class="comp-card-img" alt="JUK" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed 2026</div>
-          <div class="comp-title">JUK</div>
-          <div class="comp-role">Producer</div>
-          <div class="comp-desc">Written and directed by Tierra "TT" Frost. Chapman University MFA Graduate Thesis Film. SAG-AFTRA Student Film Agreement. 1950s Georgia, juke joint tradition, queer Black identity. World premiere May 2, 2026.</div>
-          <div class="comp-awards">
-            <div class="comp-award">ASC Heritage Award — Cinematography, Student Films</div>
-            <div class="comp-award">Out on Film Grant Recipient ($1,000)</div>
-            <div class="comp-award">PBS Fine Cut Semi-Finalist</div>
+      <div class="cat-label" style="color:rgba(240,235,224,.5);">Short Film<span style="flex:1;height:1px;background:rgba(240,235,224,.1);display:inline-block;margin-left:16px;vertical-align:middle;"></span></div>
+      <div class="proj-grid">
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="juk.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="JUK">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>JUK</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed · 2026</span><span class="proj-format-pill">MFA Thesis Film</span></div>
           </div>
-        </div>
-        <div class="comp-card">
-          <img src="i-cant-eat-eggs-anymore.jpg" class="comp-card-img" alt="I Can't Eat Eggs Anymore" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">I Can't Eat Eggs Anymore</div>
-          <div class="comp-role">Producer / Writer</div>
-          <div class="comp-desc">Male sexual abuse victims: confronting society's most protected silence around male vulnerability. Arthouse/PSA hybrid.</div>
-          <div class="comp-links">
-            <a href="https://vimeo.com/1080962340" target="_blank" class="comp-link">Watch Trailer →</a>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Film · Chapman University MFA</div>
+            <div class="proj-title" style="color:var(--cream);">JUK</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">"Freedom is worth dyin' for." A queer coming-of-age story set in 1950s Georgia.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Director</span><span>Tierra "TT" Frost</span></div>
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Awards</span><span>ASC Heritage Award · Out on Film Grant · PBS Fine Cut Semi-Finalist</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short Film</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">LGBTQ+</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Period</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">SAG-AFTRA</span></div>
           </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=JUK EPK Request" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Request EPK →</a>
         </div>
-        <div class="comp-card">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">I Can See the Light</div>
-          <div class="comp-role">Producer</div>
-          <div class="comp-desc">Male sexual abuse victims: creating space for experiences society systematically denies.</div>
-          <div class="comp-links">
-            <a href="https://vimeo.com/1039333883" target="_blank" class="comp-link">Watch →</a>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="i-cant-eat-eggs-anymore.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="I Can't Eat Eggs Anymore">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>I Can't Eat Eggs Anymore</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Short Film</span></div>
           </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Film · Arthouse / PSA</div>
+            <div class="proj-title" style="color:var(--cream);">I Can't Eat Eggs Anymore</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Male sexual abuse victims: confronting society's most protected silence around male vulnerability.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer / Writer</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short Film</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Social Impact</span></div>
+          </div>
+          <a href="https://vimeo.com/1080962340" target="_blank" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Watch Trailer →</a>
         </div>
-        <div class="comp-card">
-          <div class="comp-status">Completed</div>
-          <div class="comp-title">The WL Story</div>
-          <div class="comp-role">Producer</div>
-          <div class="comp-desc">Workplace discrimination against women and its mental health impact.</div>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <div class="proj-img-placeholder"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>I Can See the Light</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Short Film</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Film</div>
+            <div class="proj-title" style="color:var(--cream);">I Can See the Light</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Creating space for experiences society systematically denies male survivors.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short Film</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Social Impact</span></div>
+          </div>
+          <a href="https://vimeo.com/1039333883" target="_blank" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Watch →</a>
         </div>
-        <div class="comp-card">
-          <div class="comp-status">Completed 2024</div>
-          <div class="comp-title">Laugh Smith</div>
-          <div class="comp-role">UPM</div>
-          <div class="comp-desc">Short film. 2024.</div>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <img src="mist-2098.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Mist 2098">
+            <div class="proj-img-placeholder" style="display:none"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>Mist 2098</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed · 2025</span><span class="proj-format-pill">Sci-Fi Short</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Film · Sci-Fi</div>
+            <div class="proj-title" style="color:var(--cream);">Mist 2098</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">A near-future short film exploring the boundaries of memory and identity.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Sci-Fi</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short Film</span></div>
+          </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=Mist 2098 — Inquiry" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Inquire →</a>
         </div>
-        <div class="comp-card">
-          <img src="mist-2098.jpg" class="comp-card-img" alt="Mist 2098" onerror="this.style.display='none'">
-          <div class="comp-card-body">
-          <div class="comp-status">Completed 2025</div>
-          <div class="comp-title">Mist 2098</div>
-          <div class="comp-role">Producer</div>
-          <div class="comp-desc">Sci-fi short film. 2025.</div>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <div class="proj-img-placeholder"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>The WL Story</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed</span><span class="proj-format-pill">Short Film</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Film</div>
+            <div class="proj-title" style="color:var(--cream);">The WL Story</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Workplace discrimination against women and its mental health impact.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Producer</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short Film</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Social Impact</span></div>
+          </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=The WL Story — Inquiry" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Inquire →</a>
         </div>
+
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <div class="proj-img-placeholder"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>Laugh Smith</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Completed · 2024</span><span class="proj-format-pill">Short Film</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Short Film</div>
+            <div class="proj-title" style="color:var(--cream);">Laugh Smith</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Short film. 2024.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>UPM</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Short Film</span></div>
+          </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=Laugh Smith — Inquiry" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Inquire →</a>
+        </div>
+
       </div>
     </div>
 
     <!-- Live Event -->
     <div class="slate-category">
-      <div class="cat-label">Live Event</div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <div class="comp-status">Co-Produced 2025</div>
-          <div class="comp-title">Monolith Awards at the Infinity Festival</div>
-          <div class="comp-role">Co-Producer</div>
-          <div class="comp-desc">Hollywood's flagship symposium on tech-entertainment convergence. Academy Awards building &amp; Sony Hollywood campus. Sponsored by IBM and NVIDIA.</div>
+      <div class="cat-label" style="color:rgba(240,235,224,.5);">Live Event<span style="flex:1;height:1px;background:rgba(240,235,224,.1);display:inline-block;margin-left:16px;vertical-align:middle;"></span></div>
+      <div class="proj-grid">
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <div class="proj-img-placeholder"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>Monolith Awards</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">Co-Produced · 2025</span><span class="proj-format-pill">Live Event</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Live Event · Hollywood</div>
+            <div class="proj-title" style="color:var(--cream);">Monolith Awards at the Infinity Festival</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">Hollywood's flagship symposium on tech-entertainment convergence. Academy Awards building &amp; Sony Hollywood campus.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Role</span><span>Co-Producer</span></div>
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Sponsors</span><span>IBM · NVIDIA</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Live Event</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Tech-Entertainment</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Hollywood</span></div>
+          </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=Monolith Awards — Inquiry" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Inquire →</a>
         </div>
       </div>
     </div>
 
     <!-- Commercial -->
     <div class="slate-category">
-      <div class="cat-label">Commercial &amp; Brand Content</div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <div class="comp-status">200+ Productions</div>
-          <div class="comp-title">Commercials &amp; Brand Content</div>
-          <div class="comp-role">Producer / Director</div>
-          <div class="comp-desc">Fortune 500 clients including Adobe, Cisco, and ShoreTel. 20+ years. 15+ countries.</div>
+      <div class="cat-label" style="color:rgba(240,235,224,.5);">Commercial &amp; Brand Content<span style="flex:1;height:1px;background:rgba(240,235,224,.1);display:inline-block;margin-left:16px;vertical-align:middle;"></span></div>
+      <div class="proj-grid">
+        <div class="proj-card fu" style="background:rgba(240,235,224,.05);border:1px solid rgba(240,235,224,.08);">
+          <div class="proj-img">
+            <div class="proj-img-placeholder"><img src="soab-logo-color-full.png" class="proj-img-logo" alt=""><span>200+ Productions</span></div>
+            <div class="proj-status-bar"><span class="status-pill s-complete">200+ Productions</span><span class="proj-format-pill">Commercial / Brand</span></div>
+          </div>
+          <div class="proj-body-wrap">
+            <div class="proj-category" style="color:var(--gold);">Commercial & Brand Content</div>
+            <div class="proj-title" style="color:var(--cream);">Commercials &amp; Brand Content</div>
+            <div class="proj-logline" style="color:rgba(240,235,224,.7);">20+ years of global executive production. Fortune 500 clients across 15+ countries.</div>
+            <div class="proj-meta" style="border-top:1px solid rgba(240,235,224,.1);">
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Clients</span><span>Adobe · Cisco · ShoreTel</span></div>
+              <div class="proj-meta-row" style="color:rgba(240,235,224,.6);"><span class="proj-meta-key" style="color:rgba(240,235,224,.85);">Scale</span><span>200+ productions · 15+ countries</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Fortune 500</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Commercial</span><span class="tag" style="background:rgba(240,235,224,.08);color:rgba(240,235,224,.55);">Global</span></div>
+          </div>
+          <a href="mailto:marcsternberg13@gmail.com?subject=Commercial Work — Inquiry" class="proj-cta" style="color:var(--gold);border-top:1px solid rgba(240,235,224,.1);">Inquire →</a>
         </div>
       </div>
     </div>
