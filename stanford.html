@@ -188,6 +188,34 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
 .hl b { display: block; font-family: 'Playfair Display', serif; font-size: 21px; color: var(--forest); line-height: 1.25; margin-bottom: 6px; }
 .hl span { font-size: 15px; color: var(--text-mid); line-height: 1.6; }
 .hl span strong { color: var(--forest); font-weight: 600; }
+/* V2 ADDITIONS */
+.fw-wrap { margin-bottom: 28px; }
+.fw-wrap .framework { margin-bottom: 10px; }
+.fw-note { font-size: 15px; color: var(--text-mid); line-height: 1.65; max-width: 560px; }
+.fw-note strong { color: var(--forest); font-weight: 600; }
+.design { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.design li { position: relative; padding-left: 16px; font-size: 14px; color: var(--text-mid); line-height: 1.55; }
+.design li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--rust); }
+.theory { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(240,235,224,.15); font-size: 15px; line-height: 1.8; color: rgba(240,235,224,.75); }
+.theory b { display: block; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.theory strong { color: var(--cream); font-weight: 600; }
+.advocate { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; padding: 28px 30px; border: 1px solid rgba(240,235,224,.14); background: rgba(240,235,224,.04); }
+.advocate p.quote { margin-top: 0; font-size: clamp(20px,2.2vw,26px); color: var(--cream); line-height: 1.5; }
+.hero .stats { gap: 28px 34px; }
+.advocate p { font-size: 15px; color: rgba(240,235,224,.78); line-height: 1.75; }
+.advocate p strong { color: var(--cream); }
+.t-research { top: auto; bottom: 10px; left: 10px; background: var(--gold); color: var(--forest); }
+.lens { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(240,235,224,.12); font-size: 12.5px; color: rgba(240,235,224,.62); line-height: 1.55; }
+.lens b { color: var(--gold); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 10px; margin-right: 4px; }
+.origin { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(19px,2vw,23px); line-height: 1.55; color: var(--forest); border-left: 3px solid var(--rust); padding-left: 24px; margin-top: 28px; max-width: 820px; }
+.origin small { display: block; font-family: 'Barlow', sans-serif; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rust); margin-top: 12px; }
+.path3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 40px; border-top: 2px solid var(--forest); }
+.path3 div { padding: 24px 24px 8px 0; }
+.path3 div + div { padding-left: 24px; border-left: 1px solid var(--border); }
+.path3 small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--rust); margin-bottom: 6px; }
+.path3 b { display: block; font-family: 'Playfair Display', serif; font-size: 21px; color: var(--forest); margin-bottom: 8px; }
+.path3 p { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
+@media (max-width: 760px) { .advocate, .path3 { grid-template-columns: 1fr; } .path3 div, .path3 div + div { padding: 20px 0; border-left: 0; } .path3 div + div { border-top: 1px solid var(--border); } }
 @media (max-width: 760px) { .highlights { grid-template-columns: 1fr; } .hl, .hl + .hl { padding: 20px 0; border-left: 0; } .hl + .hl { border-top: 1px solid var(--border); } }
 @media (max-width: 960px) {
   .hero-grid, .two, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -224,8 +252,11 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
     <div>
       <div class="pill">Research profile · Stanford GSE PhD, Autumn 2027</div>
       <h1>How the Arts Lead <em>Cultural Change</em></h1>
-      <p class="hero-sub">Marc Sternberg studies cultural vanguardism: the artists, storytellers and institutions that lead society-level change.<span class="hero-q">What motivates them, from outside and from within? Who are the gatekeepers that decide whose work matters, and how do the successful navigate them? Do they realize their impact?</span></p>
-      <div class="framework"><b>Exclusion</b> → <b>Excellence</b> → <b>Recognition</b></div>
+      <p class="hero-sub">I study cultural vanguardism: the artists, storytellers and institutions that lead society-level change.<span class="hero-q">What motivates them, from outside and from within? Who are the gatekeepers that decide whose work matters, and how do the successful navigate them? Do they realize their impact?</span></p>
+      <div class="fw-wrap">
+        <div class="framework"><b>Exclusion</b> → <b>Excellence</b> → <b>Recognition</b></div>
+        <p class="fw-note">The path I study: people and work begin <strong>outside</strong> the institutions that confer value, earn standing through <strong>the work itself</strong>, and then wait for an institution to <strong>say it counts</strong>. Each of my studies looks at a different point on that path.</p>
+      </div>
       <p class="hero-body">I am a creative producer, U.S. Fulbright Specialist and former global marketing and ecommerce executive. I am applying to the <strong>Stanford GSE PhD in Sociology of Education</strong>, with a <strong>PhD minor in Business</strong> from the GSB.</p>
       <div class="actions">
         <a class="btn-p" href="#research">See the research</a>
@@ -233,9 +264,9 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
       </div>
       <div class="stats">
         <div><span class="stat-n">4</span><div class="stat-l">Research streams</div></div>
-        <div><span class="stat-n">20+</span><div class="stat-l">Years in business</div></div>
-        <div><span class="stat-n">15+</span><div class="stat-l">Countries</div></div>
-        <div><span class="stat-n">200+</span><div class="stat-l">Productions</div></div>
+        <div><span class="stat-n">132</span><div class="stat-l">Interviews in my<br>MSc thesis corpus</div></div>
+        <div><span class="stat-n">58</span><div class="stat-l">Documentary interviews<br>analyzed as data</div></div>
+        <div><span class="stat-n">20+</span><div class="stat-l">Years inside the<br>institutions I study</div></div>
       </div>
     </div>
     <figure class="portrait">
@@ -246,7 +277,7 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
   <div class="inner highlights" style="position:relative;margin-top:clamp(48px,6vw,72px)">
     <div class="hl"><b>The question</b><span>How do the arts lead cultural change, and how do institutions decide <strong>whose work is seen and who gets in</strong>?</span></div>
     <div class="hl"><b>The plan</b><span>A <strong>PhD in Sociology of Education</strong> at the GSE, with a <strong>PhD minor in Business</strong> at the GSB.</span></div>
-    <div class="hl"><b>The edge</b><span>Twenty years inside <strong>business, film and education</strong>, the institutions I study.</span></div>
+    <div class="hl"><b>The vantage point</b><span>Twenty years working inside <strong>business, film and education</strong>, the institutions I now study, across <strong>15+ countries</strong> and often on the deciding side of the table.</span></div>
   </div>
 </section>
 
@@ -262,6 +293,10 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
         <p><strong>I believe schools and stories do the same work.</strong> Both change what people think is possible and which beliefs they are allowed to question. That is why I want to do this research in a school of education.</p>
       </div>
       <p class="quote">My larger question is whether cultural production can signal institutional change before institutions catch up.</p>
+      <div class="theory">
+        <b>Why sociology of education</b>
+        <p>Meyer and Rowan (1978) showed that schools gain less authority from what students learn than from matching recognized categories such as grade levels, degrees and accredited schools. Collins (1979) argued that credentials mark status, not just skill. Both describe how institutions <strong>confer recognition</strong>. My studies ask how people respond to it. Film sharpens the question: it has no license or required degree, yet a nomination still changes who is funded and hired. I want to test how far that core claim of the field travels beyond schools.</p>
+      </div>
     </div>
     <aside>
       <div class="card-d">
@@ -293,28 +328,49 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
         <div class="stream-cat">Film and its gatekeepers</div>
         <h3>What Do the Rewarded Want?</h3>
         <p>What motivates Oscar-nominated directors and actors, and do they see themselves as cultural vanguards?</p>
-        <div class="stream-meta"><strong>MSc thesis, Oxford and HEC Paris.</strong> 132 published interviews with 16 nominees from the 97th and 98th Academy Awards.<br><span class="status">Due April 2027</span></div>
+        <ul class="design">
+          <li>Six motives on a circumplex adapted from Schwartz (1992) and Bourdieu (1993), each scored independently.</li>
+          <li>Sample set by a rule fixed before any results: interviews in at least three of twenty calendar quarters. Sixteen qualify: six directors, ten lead actors.</li>
+          <li>Expectation: directors cite artistic expression and cultural contribution more; actors cite relationships; both cite recognition most.</li>
+        </ul>
+        <div class="stream-meta"><strong>MSc thesis, Oxford and HEC Paris,</strong> supervised by Elie Matta. 62 anchor interviews drawn from 132 published interviews with nominees from the 97th and 98th Academy Awards.<br><span class="status">Due April 2027</span></div>
         <div class="key"><b>Why it matters:</b> it tests whether the people institutions reward know they are shaping culture.</div>
       </article>
       <article class="stream">
         <div class="stream-cat">Women in the arts</div>
         <h3>Consent as Conferral</h3>
         <p>How do under-recognized women artists, and the gatekeepers around them, respond when an outside institution offers them significance?</p>
-        <div class="stream-meta"><strong><em>Cowgirls: Women of Western Art.</em></strong> 58 documentary interviews treated as data.<br><span class="status">Preliminary coding complete</span></div>
-        <div class="key"><b>Early finding:</b> 90% signed. Every negotiation came from an artist; every refusal and stall came from an institution.</div>
+        <ul class="design">
+          <li>Release outcomes of 58 interviews treated as data on how people respond to an offer of significance.</li>
+          <li>In a preliminary coding of legacy answers, all six gatekeepers deflected their own significance. The six artists split: half claimed it.</li>
+          <li>Two artists signed only after a written promise that their recorded voices would not be used to train AI systems.</li>
+          <li>Stated limits: one coder, no control group, hypotheses rather than findings.</li>
+        </ul>
+        <div class="stream-meta"><strong>Writing sample.</strong> Built from producing <strong><em>Cowgirls: Women of Western Art.</em></strong><br><span class="status">Preliminary coding complete</span></div>
+        <div class="key"><b>Early pattern:</b> 90% signed. Every negotiation came from an artist, and the only refusal and every stall came from institutional actors.</div>
       </article>
       <article class="stream">
         <div class="stream-cat">The Trail of Tears and Indigenous art</div>
         <h3>The Encoding Trap</h3>
         <p>Why does Poteet Victory's abstract work circulate while his commissioned Trail of Tears paintings have never been shown, and does reading them depend on what viewers were taught?</p>
-        <div class="stream-meta"><strong><em>Trail with No End</em> and <em>Outside the Frame</em>.</strong> A fixed eight-question viewer study.<br><span class="status">Four pilot sessions complete</span></div>
+        <ul class="design">
+          <li>In 2000, a university museum in Oklahoma commissioned Victory to paint the Trail of Tears. The commission was canceled, and the paintings have never been exhibited.</li>
+          <li>A fixed eight-question viewer instrument, with four falsification conditions stated in advance.</li>
+          <li>Designed for twenty-four viewers across six positions in the field.</li>
+        </ul>
+        <div class="stream-meta"><strong>Runs alongside <em>Trail with No End</em>,</strong> a funded feature documentary, with <em>Outside the Frame</em> as a wider field site.<br><span class="status">Four pilot sessions complete</span></div>
         <div class="key"><b>Why it matters:</b> if recognition depends on schooling, curriculum decides who can read the work.</div>
       </article>
       <article class="stream">
         <div class="stream-cat">AI and bottom-rung workers</div>
         <h3>The Stolen Ladder</h3>
         <p>Fields have always trained newcomers through entry-level work. What happens to training, and to who gets in, when AI absorbs that work?</p>
-        <div class="stream-meta"><strong>Interview study</strong> across levels of AI exposure and career stage.<br><span class="status">Designed</span></div>
+        <ul class="design">
+          <li>Interview study of workers across levels of AI exposure and career stage.</li>
+          <li>Asks what happens to occupational training, and to who gets in, when the lowest rung disappears.</li>
+          <li>A doctoral line of work: the design is complete and no data have been collected yet.</li>
+        </ul>
+        <div class="stream-meta"><strong>Doctoral study.</strong> Connects to work on learning across the life course at the GSE.<br><span class="status">Study designed · fieldwork to come</span></div>
         <div class="key"><b>Why it matters:</b> when the lowest rung disappears, so does the way newcomers learn a field.</div>
       </article>
     </div>
@@ -325,51 +381,55 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
   <div class="inner">
     <div class="eyebrow">Son of a Botanist Productions</div>
     <h2 class="h2">A platform for <em>untold stories</em></h2>
-    <p class="lead">Son of a Botanist Productions <strong>amplifies underrepresented voices</strong> and gives communities that institutions have left out a platform to tell their own stories. I work as a producer-advocate, and the slate is also <strong>a living laboratory for my research.</strong></p>
+    <p class="lead">Son of a Botanist Productions <strong>amplifies underrepresented voices</strong> and gives communities that institutions have left out a platform to tell their own stories. <strong>Three projects double as research field sites</strong>, marked below. The rest shape the questions I ask, because each one puts me in front of a gatekeeping decision from the side of the people waiting on it.</p>
+    <div class="advocate">
+      <p class="quote">My job is not to be the voice. It is to widen the door.</p>
+      <p>I work as a <strong>producer-advocate</strong>: I find storytellers with authentic ties to their communities, then help their work reach an audience. Producing films on sensitive subjects, from addiction and recovery to survivors of abuse, taught me to hold difficult conversations with care. I bring that same care to consent and representation in research.</p>
+    </div>
     <h3 class="slate-cat">Documentaries</h3>
     <div class="slate">
       <article class="film">
-        <div class="film-img"><img src="/cowgirls-women-of-western-art.jpg" alt="Cowgirls: Women of Western Art key art"><span class="tag t-post">Post-production</span></div>
-        <div class="film-body"><div class="film-title">Cowgirls: Women of Western Art</div><div class="film-role">Feature documentary · Producer, writer, director</div><p class="film-desc"><strong>Women in the arts</strong>, narrated by Red Steagall.</p></div>
+        <div class="film-img"><img src="/cowgirls-women-of-western-art.jpg" alt="Cowgirls: Women of Western Art key art"><span class="tag t-post">Post-production</span><span class="tag t-research">Research field site</span></div>
+        <div class="film-body"><div class="film-title">Cowgirls: Women of Western Art</div><div class="film-role">Feature documentary · Producer, writer, director</div><p class="film-desc"><strong>Women in the arts</strong>, narrated by Red Steagall.</p><p class="lens"><b>Research</b>Source of <em>Consent as Conferral</em>, my writing sample.</p></div>
       </article>
       <article class="film">
         <div class="film-img"><img src="/his-way.jpg" alt="His Way key art"><span class="tag t-post">Post-production</span></div>
-        <div class="film-body"><div class="film-title">His Way</div><div class="film-role">Documentary · Producer, writer, director</div><p class="film-desc"><strong>Addiction and recovery</strong>, through an alternative approach in Alabama.</p></div>
+        <div class="film-body"><div class="film-title">His Way</div><div class="film-role">Documentary · Producer, writer, director</div><p class="film-desc"><strong>Addiction and recovery</strong>, through an alternative approach in Alabama.</p><p class="lens"><b>Lens</b>How an approach outside the mainstream earns trust.</p></div>
       </article>
       <article class="film">
-        <div class="film-img"><img src="/victory.jpg" alt="Trail with No End key art"><span class="tag t-prod">In production</span></div>
-        <div class="film-body"><div class="film-title">Trail with No End</div><div class="film-role">Feature documentary · Producer</div><p class="film-desc"><strong>Indigenous art and erasure:</strong> Cherokee-Choctaw painter Poteet Victory and his never-exhibited Trail of Tears triptych.</p></div>
+        <div class="film-img"><img src="/victory.jpg" alt="Trail with No End key art"><span class="tag t-prod">In production</span><span class="tag t-research">Research field site</span></div>
+        <div class="film-body"><div class="film-title">Trail with No End</div><div class="film-role">Feature documentary · Producer</div><p class="film-desc"><strong>Indigenous art and erasure:</strong> Cherokee-Choctaw painter Poteet Victory and his never-exhibited Trail of Tears triptych.</p><p class="lens"><b>Research</b>Field site for <em>The Encoding Trap</em> viewer study.</p></div>
       </article>
       <article class="film">
-        <div class="film-img"><img src="/outside-the-frame.jpg" alt="Outside the Frame key art"><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">Outside the Frame</div><div class="film-role">Eight-part docuseries · Producer</div><p class="film-desc"><strong>Modern Native America</strong>, told by Indigenous artists in their own words.</p></div>
+        <div class="film-img"><img src="/outside-the-frame.jpg" alt="Outside the Frame key art"><span class="tag t-dev">In development</span><span class="tag t-research">Research field site</span></div>
+        <div class="film-body"><div class="film-title">Outside the Frame</div><div class="film-role">Eight-part docuseries · Producer</div><p class="film-desc"><strong>Modern Native America</strong>, told by Indigenous artists in their own words.</p><p class="lens"><b>Research</b>Wider field site for how Indigenous art is read and recognized.</p></div>
       </article>
       <article class="film">
         <div class="film-img"><img src="/guardians-of-the-green.jpg" alt="Guardians of the Green key art"><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">Guardians of the Green</div><div class="film-role">Feature documentary · Producer · with UNDP Bolivia</div><p class="film-desc"><strong>Indigenous rights and environmental sovereignty</strong> in the Bolivian Amazon.</p></div>
+        <div class="film-body"><div class="film-title">Guardians of the Green</div><div class="film-role">Feature documentary · Producer · with UNDP Bolivia</div><p class="film-desc"><strong>Indigenous rights and environmental sovereignty</strong> in the Bolivian Amazon.</p><p class="lens"><b>Lens</b>Communities claiming authority over their own land and story.</p></div>
       </article>
       <article class="film">
         <div class="film-img"><img src="/tipping-africa.jpg" alt="Tipping Africa key art"><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">Tipping Africa</div><div class="film-role">Feature documentary · Producer</div><p class="film-desc"><strong>Pharmaceutical sovereignty:</strong> African scientists and manufacturers building medicine supply from within.</p></div>
+        <div class="film-body"><div class="film-title">Tipping Africa</div><div class="film-role">Feature documentary · Producer</div><p class="film-desc"><strong>Pharmaceutical sovereignty:</strong> African scientists and manufacturers building medicine supply from within.</p><p class="lens"><b>Lens</b>Who builds capacity when outside institutions will not.</p></div>
       </article>
       <article class="film">
         <div class="film-img"><img src="/in-service-of-the-kingdom.jpg" alt="In Service of the Kingdom key art"><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">In Service of the Kingdom</div><div class="film-role">Feature documentary and miniseries · Producer</div><p class="film-desc"><strong>Philanthropy and cross-cultural bridge-building</strong>: a portrait of an Arab investor-philanthropist.</p></div>
+        <div class="film-body"><div class="film-title">In Service of the Kingdom</div><div class="film-role">Feature documentary and miniseries · Producer</div><p class="film-desc"><strong>Philanthropy and cross-cultural bridge-building</strong>: a portrait of an Arab investor-philanthropist.</p><p class="lens"><b>Lens</b>How outsiders are read across cultural lines.</p></div>
       </article>
       <article class="film">
-        <div class="film-img type"><span class="poster-title">The Tyrion Effect</span><span class="poster-line">Being different in Hollywood</span><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">The Tyrion Effect</div><div class="film-role">Feature documentary · Producer</div><p class="film-desc"><strong>Being different in Hollywood:</strong> acceptance, rejection, gatekeeping, rule-breaking and role creation.</p></div>
+        <div class="film-img type"><span class="poster-title">The Tyrion Effect</span><span class="poster-line">Casting as Gatekeepers in Hollywood</span><span class="tag t-dev">In development</span></div>
+        <div class="film-body"><div class="film-title">The Tyrion Effect</div><div class="film-role">Feature documentary · Producer</div><p class="film-desc"><strong>Being different in Hollywood:</strong> acceptance, rejection, rule-breaking and role creation.</p><p class="lens"><b>Lens</b>Casting decides who appears on screen, and so whose story gets told.</p></div>
       </article>
     </div>
     <h3 class="slate-cat">Narrative features</h3>
     <div class="slate">
       <article class="film">
         <div class="film-img"><img src="/BL-logo.jpg" alt="Blood Court key art"><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">Blood Court</div><div class="film-role">Feature horror film · Producer · Story by Marc Sternberg</div><p class="film-desc"><strong>Classism and racism</strong> at an elite tennis club, told as an elevated horror-thriller. Script complete; directed by TT Frost and Dawit.</p></div>
+        <div class="film-body"><div class="film-title">Blood Court</div><div class="film-role">Feature horror film · Producer · Story by Marc Sternberg</div><p class="film-desc"><strong>Classism and racism</strong> at an elite tennis club, told as an elevated horror-thriller. Script complete; directed by TT Frost and Dawit.</p><p class="lens"><b>Lens</b>Exclusion inside an elite institution, told as genre.</p></div>
       </article>
       <article class="film">
         <div class="film-img"><img src="/the-owls-club.jpg" alt="The Owls Club key art"><span class="tag t-dev">In development</span></div>
-        <div class="film-body"><div class="film-title">The Owls Club</div><div class="film-role">Historical sports drama · Producer</div><p class="film-desc"><strong>Black women's history:</strong> Seattle's first all-Black women's softball team, the 1938 state champions.</p></div>
+        <div class="film-body"><div class="film-title">The Owls Club</div><div class="film-role">Historical sports drama · Producer</div><p class="film-desc"><strong>Black women's history:</strong> Seattle's first all-Black women's softball team, the 1938 state champions.</p><p class="lens"><b>Lens</b>Excellence that history did not record. Developed with writer-director TT Frost.</p></div>
       </article>
     </div>
     <h3 class="slate-cat">Short films</h3>
@@ -380,7 +440,7 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
       </article>
       <article class="film">
         <div class="film-img"><img src="/i-cant-eat-eggs-anymore.jpg" alt="I Can't Eat Eggs Anymore key art"><span class="tag t-post">Post-production</span></div>
-        <div class="film-body"><div class="film-title">I Can't Eat Eggs Anymore</div><div class="film-role">Short · Producer, co-writer</div><p class="film-desc"><strong>Sexual abuse</strong>, told as an arthouse and PSA hybrid.</p></div>
+        <div class="film-body"><div class="film-title">I Can't Eat Eggs Anymore</div><div class="film-role">Short · Producer, co-writer</div><p class="film-desc"><strong>Sexual abuse</strong>, told as an arthouse and PSA hybrid.</p><p class="lens"><b>Lens</b>Male survivors of sexual abuse, a story rarely told.</p></div>
       </article>
     </div>
   </div>
@@ -394,7 +454,7 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
     <div class="minor">
       <div class="box">
         <h3>PhD, Sociology of Education</h3>
-        <p>My work so far is qualitative. At Stanford, I want to add <strong>computational text and network methods</strong> so I can study how recognition moves through a field at scale.</p>
+        <p>My work so far blends qualitative coding with descriptive frequencies. At Stanford, I want to add <strong>computational text and network methods</strong> so I can study how recognition moves through a field at scale. SHIPS coursework in statistics and network methods is the formal training my agenda requires.</p>
       </div>
       <div class="box">
         <h3>PhD minor in Business</h3>
@@ -402,17 +462,18 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
       </div>
     </div>
 
-    <h3 class="fac-head">Faculty I hope to learn from</h3>
-    <p class="fac-sub">My lead advisor would come from the GSE. I hope to build a cross-functional committee that includes faculty from other schools.</p>
+    <h3 class="fac-head">Faculty whose work I would learn from</h3>
+    <p class="fac-sub">My lead advisor would come from the GSE. My framework descends from Stanford's neoinstitutional tradition, which continues in the GSE faculty below. Over time, I hope to build a cross-school committee and to take coursework with faculty across the GSB and Sociology.</p>
     <div class="fac">
       <div class="fac-col">
         <h4>Graduate School of Education</h4>
         <ul>
-          <li><b>Mitchell Stevens</b><span>Credentials, prestige, and AI and early-career learning</span><i class="key">Potential advisor</i></li>
-          <li><b>Dan McFarland</b><span>Gatekeeping and how new ideas spread</span><i class="key">Potential advisor</i></li>
-          <li><b>Patricia Bromley</b><span>How institutional models spread and how groups appear in curricula</span><i class="key">Potential advisor</i></li>
+          <li><b>Mitchell Stevens</b><span><em>Creating a Class</em> treats admissions as a market in prestige, the same selection machinery I study in Hollywood. His work on learning across the life course anchors the Stolen Ladder.</span><i class="key">Potential advisor</i></li>
+          <li><b>Dan McFarland</b><span>Peer review and how new ideas spread in science: gatekeeping studied at scale, with the network methods my larger question needs.</span><i class="key">Potential advisor</i></li>
+          <li><b>Patricia Bromley</b><span>How institutional models spread, and computational analysis of how groups appear in textbooks, a model for reading interviews as institutional evidence.</span><i class="key">Potential advisor</i></li>
           <li><b>Walter W. Powell</b><span>Institutional theory and how organizations come to look alike, the foundation of my framework</span><i>Learn from</i></li>
-          <li><b>Ari Kelman</b><span>How cultural producers explain their own work</span><i>Learn from</i></li>
+          <li><b>Ari Kelman</b><span>Interviews with songwriters and industry leaders on how cultural producers account for their work, the question at the center of my thesis.</span><i>Learn from</i></li>
+          <li><b>Celene Reynolds</b><span><em>Unlawful Advances</em> traces how feminist activists changed institutions through Title IX: outsiders reshaping the rules of who belongs.</span><i>Learn from</i></li>
           <li><b>Dora Demszky</b><span>Computational text analysis</span><i>Methods training</i></li>
         </ul>
       </div>
@@ -420,15 +481,15 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
         <h4>Graduate School of Business</h4>
         <ul>
           <li><b>Sarah Soule</b><span>Social movements and how activism changes organizations</span><i>Learn from</i></li>
-          <li><b>Jennifer Aaker</b><span>Narrative and how stories move people</span><i>Classes · committee</i></li>
-          <li><b>Hayagreeva Rao</b><span>Social movements and cultural change in markets</span><i>Classes · committee</i></li>
-          <li><b>Amir Goldberg</b><span>Computational modeling of culture</span><i>Classes · committee</i></li>
+          <li><b>Jennifer Aaker</b><span>Narrative and how stories move people</span><i>Coursework</i></li>
+          <li><b>Hayagreeva Rao</b><span>Social movements and cultural change in markets</span><i>Coursework</i></li>
+          <li><b>Amir Goldberg</b><span>Computational modeling of culture</span><i>Coursework</i></li>
         </ul>
       </div>
       <div class="fac-col">
         <h4>Sociology</h4>
         <ul>
-          <li><b>Forrest Stuart</b><span>Ethnography of cultural producers and their institutions</span><i>Learn from · committee</i></li>
+          <li><b>Forrest Stuart</b><span>Ethnography of cultural producers and their institutions</span><i>Learn from</i></li>
         </ul>
       </div>
     </div>
@@ -437,14 +498,15 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
 
 <section style="background: var(--cream-dark);">
   <div class="inner">
-    <div class="eyebrow">What makes me different</div>
+    <div class="eyebrow">Path to this research</div>
     <h2 class="h2">Inside the three worlds <em>that shape culture</em></h2>
-    <p class="lead">I study culture from inside business, film and education. <strong>Few researchers in this area have run the kinds of institutions they study.</strong></p>
+    <p class="lead">My questions come from inside business, film and education, the institutions I now study. That shapes <strong>the questions I ask and the access I have.</strong></p>
+    <p class="origin">At twenty-three, I sold my commercial laundry company. Its business plan won a Kauffman Foundation award, and the recognition made the company more attractive to buyers. Nothing about the company changed except that an institution had vouched for it. I have spent two decades watching that gap.<small>Where the question started</small></p>
     <div class="worlds">
-      <div class="world"><h3>Operator</h3><p><strong>Built and sold my first company at 23</strong>; its business plan won a Kauffman Foundation award. Later led digital and ecommerce units for five global manufacturers, with <strong>teams of up to 40 and budgets up to $350M.</strong></p></div>
-      <div class="world"><h3>Producer</h3><p><strong>Twelve years producing film and media</strong>, including 200+ commercials and brand pieces. Co-produced the Monolith Awards at the 2025 Infinity Festival, a symposium on AI and entertainment.</p></div>
-      <div class="world"><h3>Educator</h3><p>Taught English in Harbin, China. As a U.S. Fulbright Specialist, I teach <strong><em>Hunger, Curiosity &amp; Chaos: 101 Ways Entrepreneurs Think</em></strong>, my own curriculum built from research and experience. <strong>I see education as one of the strongest drivers of cultural change.</strong></p></div>
-      <div class="world"><h3>Lifelong student</h3><p><strong>I enter each field as a student first.</strong> Each degree adds a lens: business, leadership, filmmaking, creative writing, strategy and change leadership.</p></div>
+      <div class="world"><h3>Operator</h3><p><strong>Built and sold my first company at 23</strong>; its business plan won a Kauffman Foundation award. Later led digital and ecommerce units for five global manufacturers, with <strong>teams of up to 40 and budgets up to $350M.</strong> Built a digital center of excellence in Bangalore and managed a second team in Pakistan, where I learned that a decision made at headquarters can land as exclusion elsewhere.</p></div>
+      <div class="world"><h3>Producer</h3><p><strong>Twelve years producing film and media</strong>, including 200+ commercials and brand pieces. MFA in Producing from Chapman's Dodge College. Co-produced the Monolith Awards at the 2025 Infinity Festival, a symposium on AI and entertainment.</p></div>
+      <div class="world"><h3>Educator</h3><p>Taught English in Harbin, China. As a U.S. Fulbright Specialist, I teach <strong><em>Hunger, Curiosity &amp; Chaos: 101 Ways Entrepreneurs Think</em></strong>, my own curriculum, in Khujand, Tajikistan in November 2026. At Oxford, I served as a divisional representative in the student union. <strong>I see education as one of the strongest drivers of cultural change.</strong></p></div>
+      <div class="world"><h3>Lifelong student</h3><p><strong>I enter each field as a student first.</strong> Each degree taught me a field's language: business, leadership, filmmaking, creative writing, strategy and change leadership. <strong>The PhD is the first that lets me answer my own question with original research.</strong></p></div>
     </div>
     <div class="recog">
       <div>
@@ -454,14 +516,16 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
           <li>Director's Award, Oxford Executive Diploma in Strategy and Innovation, 2025</li>
           <li>Most Outstanding Graduate, College of Letters and Sciences, Arizona State University, 2008</li>
           <li>Entrepreneurial Advantage Award, Kauffman Foundation, 2008</li>
+          <li><em>JUK</em>: ASC Heritage Award, Out on Film grant, PBS Fine Cut semifinalist</li>
           <li>Honorable Mention, Finish Line Script Competition, for the TV pilot <em>SITA: Spies in the Air</em>, 2024</li>
         </ul>
       </div>
       <div>
         <h3>Education</h3>
         <ul class="dots">
-          <li>MSc in Change Leadership, University of Oxford and HEC Paris (in progress)</li>
+          <li>MSc in Change Leadership, University of Oxford and HEC Paris (in progress; thesis supervised by Elie Matta)</li>
           <li>Executive Diploma in Strategy and Innovation, University of Oxford</li>
+          <li>Undergraduate Diploma in Creative Writing, University of Oxford</li>
           <li>MFA in Producing for Film and Television, Chapman University, Dodge College</li>
           <li>MBA, University of Arizona</li>
           <li>MA in Administration (Leadership), Northern Arizona University</li>
@@ -474,8 +538,13 @@ footer a { color: rgba(240,235,224,.75); text-decoration: none; }
 <section>
   <div class="inner leads">
     <div class="eyebrow">Where it leads</div>
-    <p class="big">The PhD is a platform for the two things I do best: <em>thought leadership</em> and <em>content creation</em>, including research, publishing and teaching.</p>
-    <p class="lead">I want to turn original research on how culture is made and rewarded into <strong>books, speaking, teaching and film.</strong> Over the long term, I want to lead cultural change as a scholar and executive producer who understands both how stories are made and how institutions decide which ones are heard.</p>
+    <p class="big">The PhD is a <em>home for research and teaching</em>: the place where the work is tested, reviewed by peers and earns its standing.</p>
+    <p class="lead">After the PhD, I intend to pursue a <strong>faculty career studying cultural vanguardism</strong>: whether storytellers act as agents of social change, and whether they realize it. Research comes first. Once a finding holds up, it can reach people through more than journals, including <strong>books, lectures, teaching and documentary film.</strong></p>
+  </div>
+  <div class="inner path3">
+    <div><small>First</small><b>Research</b><p>Original studies of how institutions decide what counts and who gets in, published in sociology and organization studies.</p></div>
+    <div><small>Alongside</small><b>Teaching</b><p>Courses at the intersection of education, business and the arts, and mentoring students who arrive from industry or outside the usual pipelines.</p></div>
+    <div><small>Beyond</small><b>Public reach</b><p>Thought leadership and content creation (including research, publishing and teaching), carried into books, lectures and film that rest on validated findings.</p></div>
   </div>
 </section>
 
